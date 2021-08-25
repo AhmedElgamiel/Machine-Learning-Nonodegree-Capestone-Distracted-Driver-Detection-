@@ -1,6 +1,6 @@
 # Capestone Project - Distracted Driver Detection
 
-[Macj=hine Learning Nanodegree]
+[Machine Learning Nanodegree]
 
 ## Problem Statement
 The problem that we are trying to solve is a multi-class classification problem. We are tasked to properly predict and classify driver’s behavior given the dashboard images of people doing 10 different actions, 9 of which are considered actions of distracted behavior. The 10 classes are as follows: c0: safe driving, c1: texting – right, c2: talking on the phone – right, c3: texting – left, c4: talking on the phone – left, c5: operating the radio, c6: drinking, c7: reaching behind, c8: hair and makeup, c9: talking to passenger.
@@ -24,3 +24,15 @@ B. Implemetation
    4. Test model :
       1. Used the validation set to test the model locally. Then when I was not satisfied, I tested the model on the test dataset and I got bad results , accuracy = 16.9441%.
       2. Then , I tried transfer learning using VGG16 net , I got very good results.I removed the last three layers of the VGG16 net and added three dense layers.The first two              of them has relu activation and the third has softmax. I freezed the pre-trained layers and trained only the last 3 layers with 5 epochs , batch size 20.This lowest loss          = 0.01525, and the highest accuracy = 99.5392% .
+ 
+ C. Refinement :
+   I made some modifications to the first model , First I added another convolution layer . Second , I added another dense layer with relu activation . I also added dropout to the mode    to decrease overfitting .
+![Archeticture](https://github.com/AhmedElgamiel/Machine-Learning-Nonodegree-Capestone-Distracted-Driver-Detection-/blob/main/Archeticture.PNG)
+   The lowest log loss that it achieved on the whole test dataset is 0.34090, and I got accuracy = 89.7295%. The model does well but it was still not enough to beat the benchmark    result of 0.248.
+   Then , I tried transfer learning using VGG16 net , I got very good results. I removed the last three layers of the VGG16 net and added three dense layers. The first two of them    has relu activation and the third has softmax. I freezed the pre-trained layers and trained only the last 3 layers with 5 epochs , batch size 20. This lowest loss = 0.01525,      and the highest accuracy = 99.5392% .
+ ![Archeticture2](https://github.com/AhmedElgamiel/Machine-Learning-Nonodegree-Capestone-Distracted-Driver-Detection-/blob/main/Archeticture2.PNG)
+   
+ 
+ C. Testing and Results :
+   After Refinement , here is the final results
+  ![Results](https://github.com/AhmedElgamiel/Machine-Learning-Nonodegree-Capestone-Distracted-Driver-Detection-/blob/main/Results.PNG)
