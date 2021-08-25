@@ -1,5 +1,5 @@
 ## Dataset
-** (Dataset from kaggle) [https://www.kaggle.com/c/state-farm-distracted-driver-detection/data] **
+** [Dataset from kaggle] (https://www.kaggle.com/c/state-farm-distracted-driver-detection/data) **
 ** File names: driver_imgs_list.csv imgs.zip sample_submission.csv **
 
 ## Libraries and methods
